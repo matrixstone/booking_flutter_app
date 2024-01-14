@@ -1,3 +1,4 @@
+import 'package:booking_app/screens/home_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -13,7 +14,7 @@ class BottomBar extends StatefulWidget {
 class _BottomBarState extends State<BottomBar> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
-    const Text("Home"),
+    HomeScreen(),
     const Text("Search"),
     const Text("Tickets"),
     const Text("Profile"),
@@ -42,6 +43,7 @@ class _BottomBarState extends State<BottomBar> {
         showUnselectedLabels: false,
         selectedItemColor: Colors.blue,
         unselectedItemColor: const Color(0xff999999),
+        type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(
               icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
