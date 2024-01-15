@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:booking_app/utils/app_styles.dart';
+import 'package:booking_app/screens/ticket_view.dart';
 import 'package:gap/gap.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,6 +20,7 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 const Gap(40),
+                // Header
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -44,6 +46,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 const Gap(25),
+                // Search Bar
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -65,6 +68,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const Gap(40),
+                // Upcomming Flights
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -87,7 +91,9 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             ),
-          )
+          ),
+          const Gap(15),
+          TicketView(),
         ],
       ),
     );
